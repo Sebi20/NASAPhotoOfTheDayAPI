@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sebi20/NASAPhotoOfTheDayAPI/static/css/main.c51714b1.css",
+    "main.js": "/Sebi20/NASAPhotoOfTheDayAPI/static/js/main.04439d6c.js",
+    "index.html": "/Sebi20/NASAPhotoOfTheDayAPI/index.html",
+    "main.c51714b1.css.map": "/Sebi20/NASAPhotoOfTheDayAPI/static/css/main.c51714b1.css.map",
+    "main.04439d6c.js.map": "/Sebi20/NASAPhotoOfTheDayAPI/static/js/main.04439d6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c51714b1.css",
+    "static/js/main.04439d6c.js"
+  ]
+}
