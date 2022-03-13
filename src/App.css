@@ -1,6 +1,7 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  color: aliceblue;
 }
 
 body {
@@ -29,6 +30,14 @@ body {
   box-shadow: 0px 1px 12px 12px rgba(3, 172, 250, 0.5);
   background-color: aliceblue;
   animation-name: colorchange;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
+}
+
+.mainTextSection{
+  color: aliceblue;
+  max-width: 1100px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
