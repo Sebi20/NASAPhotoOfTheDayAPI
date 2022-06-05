@@ -41,3 +41,31 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .nasaImg {
+    max-width: 400px;
+    height: 300px;
+    border-radius: 5px;
+  }
+
+  .mainTextSection{
+    width: 300px;
+    font-size: 9px;
+    margin: 5px;
+  }
+
+  .title{
+    font-size: 14px;
+  }
+
+  .heading{
+    font-size: 23px;
+  }
+
+  .renderbtn{
+    font-size: smaller;
+    width: 200px;
+    height:30px;
+  }
+}

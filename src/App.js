@@ -9,7 +9,7 @@ export default function App() {
     copyright: "",
     date: "",
     details: "",
-  })
+  });
 
   function fetchImage() {
     //The fetch method uses a url to get the data from the api and turns it into a response
@@ -31,27 +31,38 @@ export default function App() {
           details: data.explanation
         }); // When the data is fetched will set the url of the image from the api and set it to the url of the page
       });
+
+  };
+
+
+  if(data.copyright === 'Taken by: undefined'){
+    setData({
+      ...data,
+      copyright: 'Taken by: Not stated by NASA'
+  })
   }
+  
 
   return (
     <>
-    <div className="App">
-      <h1 className='heading'>NASA's picture of the day</h1>
+      <div className="App">
+        <h1 className='heading'>NASA's picture of the day</h1>
 
-      <button className='renderbtn' onClick={fetchImage}>
-        Reveal NASA image of the day
-      </button>
-      <div>
-        <h2>{data.title}</h2>
-       <img alt='' className="nasaImg" src={data.url}/>
-      </div>
+        <button className='renderbtn' onClick={fetchImage}>
+          Reveal NASA image of the day
+        </button>
+        
+        <div className='wholeContent'>
+          <h2 className='title'>{data.title}</h2>
+          <img alt='' className="nasaImg" src={data.url}/>
+        </div>
 
+        <div className='mainTextSection'>
+          <h3 className='copyright'>{data.copyright}</h3>
+          <h3 className='date' >{data.date}</h3>
+          <h3 className='details' >{data.details}</h3>
+        </div>
 
-    </div>
-    <div className='mainTextSection'>
-        <h3 className='copyright'>{data.copyright}</h3>
-        <h3 className='date' >{data.date}</h3>
-        <h3 className='details' >{data.details}</h3>
       </div>
     </>
   );
