@@ -1,6 +1,6 @@
 
 import './App.css';
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 export default function App() {
   const [data, setData] = useState({
@@ -11,7 +11,7 @@ export default function App() {
     details: "",
   });
 
-  function fetchImage() {
+  useEffect(()=> {
     //The fetch method uses a url to get the data from the api and turns it into a response
     //if the response is sucessful then I use the .json function to turn the response into an object.
     fetch("https://api.nasa.gov/planetary/apod?api_key=szlRkS4z8F18ogUB1pvvgrAMCGNc4yKDkQ24PTvM")
@@ -20,6 +20,7 @@ export default function App() {
         console.log("ohh no 😕. They shut me off from the API");
         document.write("ohh no😕");
         } // End of if statement
+        console.log("good")
         return response.json();
       })
       .then((data) => {
@@ -31,8 +32,8 @@ export default function App() {
           details: data.explanation
         }); // When the data is fetched will set the url of the image from the api and set it to the url of the page
       });
-
-  };
+  }, []);
+    
 
 
   if(data.copyright === 'Taken by: undefined'){
@@ -48,9 +49,9 @@ export default function App() {
       <div className="App">
         <h1 className='heading'>NASA's picture of the day</h1>
 
-        <button className='renderbtn' onClick={fetchImage}>
+        {/* <button className='renderbtn' onClick={fetchImage}>
           Reveal NASA image of the day
-        </button>
+        </button> */}
         
         <div className='wholeContent'>
           <h2 className='title'>{data.title}</h2>
