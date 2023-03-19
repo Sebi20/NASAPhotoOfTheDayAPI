@@ -9,7 +9,7 @@ export default function App() {
     copyright: "",
     date: "",
     details: "",
-  });
+  }); 
 
   useEffect(()=> {
     //The fetch method uses a url to get the data from the api and turns it into a response
@@ -18,16 +18,16 @@ export default function App() {
     .then((response) => {
       if (!response.ok) {
         console.log("ohh no 😕. They shut me off from the API");
-        document.write("ohh no😕");
+        document.write("ohh no😕. They shut me off from the API");
         } // End of if statement
-        console.log("good")
+        console.log("good") 
         return response.json();
       })
       .then((data) => {
         setData({
           title: `"${data.title}"`,
           url: data.hdurl,
-          copyright: `Taken by: ${data.copyright}`,
+          copyright: `Photographer: ${data.copyright}`,
           date: `Date: ${data.date}`,
           details: data.explanation
         }); // When the data is fetched will set the url of the image from the api and set it to the url of the page

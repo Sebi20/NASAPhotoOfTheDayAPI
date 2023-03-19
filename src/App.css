@@ -8,6 +8,12 @@ body {
   background-color: #343435;
 }
 
+.heading{
+  animation-name: colorchange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
 .nasaImg {
   max-width: 1100px;
   height: 500px;
@@ -15,23 +21,11 @@ body {
 }
 
 @keyframes colorchange {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  75%  {background-color: pink;}
-  100% {background-color: green;}
-}
-
-.renderbtn{
-  padding: 5px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  font-size: larger;
-  box-shadow: 0px 1px 12px 12px rgba(3, 172, 250, 0.5);
-  background-color: aliceblue;
-  animation-name: colorchange;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  75%  {color: pink;}
+  100% {color: green;}
 }
 
 .mainTextSection{
@@ -61,11 +55,5 @@ body {
 
   .heading{
     font-size: 23px;
-  }
-
-  .renderbtn{
-    font-size: smaller;
-    width: 200px;
-    height:30px;
   }
 }
