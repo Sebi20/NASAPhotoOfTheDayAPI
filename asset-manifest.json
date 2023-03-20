@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NASAPhotoOfTheDayAPI/static/css/main.113f8457.css",
-    "main.js": "/NASAPhotoOfTheDayAPI/static/js/main.822e06b0.js",
+    "main.css": "/NASAPhotoOfTheDayAPI/static/css/main.bd487bee.css",
+    "main.js": "/NASAPhotoOfTheDayAPI/static/js/main.f30ed9f9.js",
     "index.html": "/NASAPhotoOfTheDayAPI/index.html",
-    "main.113f8457.css.map": "/NASAPhotoOfTheDayAPI/static/css/main.113f8457.css.map",
-    "main.822e06b0.js.map": "/NASAPhotoOfTheDayAPI/static/js/main.822e06b0.js.map"
+    "main.bd487bee.css.map": "/NASAPhotoOfTheDayAPI/static/css/main.bd487bee.css.map",
+    "main.f30ed9f9.js.map": "/NASAPhotoOfTheDayAPI/static/js/main.f30ed9f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.113f8457.css",
-    "static/js/main.822e06b0.js"
+    "static/css/main.bd487bee.css",
+    "static/js/main.f30ed9f9.js"
   ]
 }
