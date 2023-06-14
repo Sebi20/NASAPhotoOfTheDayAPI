@@ -3,12 +3,14 @@ import './App.css';
 import {useState, useEffect} from "react"
 
 export default function App() {
+  const [type, setType] = useState();
   const [data, setData] = useState({
     title: "",
     url: "",
     copyright: "",
     date: "",
     details: "",
+    media:"",
   }); 
 
   useEffect(()=> {
@@ -29,9 +31,11 @@ export default function App() {
           url: data.hdurl,
           copyright: `Photographer: ${data.copyright}`,
           date: `Date: ${data.date}`,
-          details: data.explanation
+          details: data.explanation,
+          media: data.media_type,
         }); // When the data is fetched will set the url of the image from the api and set it to the url of the page
       });
+
   }, []);
     
 
@@ -49,9 +53,6 @@ export default function App() {
       <div className="App">
         <h1 className='heading'>NASA's picture of the day</h1>
 
-        {/* <button className='renderbtn' onClick={fetchImage}>
-          Reveal NASA image of the day
-        </button> */}
         
         <div className='wholeContent'>
           <h2 className='title'>{data.title}</h2>
